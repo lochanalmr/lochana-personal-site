@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            animation: fadeIn 1s ease-out;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2d3748;
+        }
+
+        .subtitle {
+            color: #718096;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .project-card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+        }
+
+        .project-card h3 {
+            color: #2d3748;
+            margin-bottom: 1rem;
+        }
+
+        .project-card p {
+            color: #718096;
+            margin-bottom: 1rem;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            background: #e2e8f0;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.875rem;
+            color: #4a5568;
+        }
+
+        .contact-section {
+            margin-top: 4rem;
+            text-align: center;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            color: #4a5568;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #2d3748;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-20px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        .animate-slide-in {
+            animation: slideIn 0.5s ease-out forwards;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>John Doe</h1>
+            <p class="subtitle">Full Stack Developer & UI/UX Designer</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="projects-grid">
+            <article class="project-card animate-slide-in" style="animation-delay: 0.1s">
+                <h3>E-commerce Platform</h3>
+                <p>A full-stack e-commerce solution built with React and Node.js. Features include user authentication, payment processing, and inventory management.</p>
+                <div class="tags">
+                    <span class="tag">React</span>
+                    <span class="tag">Node.js</span>
+                    <span class="tag">MongoDB</span>
+                </div>
+            </article>
+
+            <article class="project-card animate-slide-in" style="animation-delay: 0.2s">
+                <h3>Weather Dashboard</h3>
+                <p>Real-time weather tracking application utilizing multiple APIs. Includes 7-day forecast and location-based services.</p>
+                <div class="tags">
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">API</span>
+                    <span class="tag">CSS3</span>
+                </div>
+            </article>
+
+            <article class="project-card animate-slide-in" style="animation-delay: 0.3s">
+                <h3>Task Management App</h3>
+                <p>A collaborative task management tool with real-time updates and team collaboration features.</p>
+                <div class="tags">
+                    <span class="tag">Vue.js</span>
+                    <span class="tag">Firebase</span>
+                    <span class="tag">Tailwind</span>
+                </div>
+            </article>
+        </section>
+
+        <section class="contact-section">
+            <h2>Get in Touch</h2>
+            <p>Interested in working together? Let's connect!</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="far fa-envelope"></i></a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
